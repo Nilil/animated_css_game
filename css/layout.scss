@@ -1,0 +1,137 @@
+@mixin layers ($bs, $is) {
+  block-size: $bs;
+  inline-size: $is;
+  opacity: .4;
+}
+
+body {
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  block-size: 100vh;
+  inline-size: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.container {
+  position: relative;
+  block-size: 80%;
+  inline-size: 85%;
+  background-color: lightgray;
+  border: 10px solid rgb(157, 174, 180);
+  border-radius: 5%;
+
+  &__layer {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &-1 {
+    @include layers(75%, 20%);
+    left: 10%;
+    background-color: purple;
+  }
+
+  &-2 {
+    @include layers(70%, 45%);
+    background-color: pink;
+  }
+
+  &-3 {
+    @include layers(65%, 20%);
+    left: 40%;
+    background-color: green;
+  }
+
+  &-4 {
+    @include layers(60%, 50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: blue;
+  }
+
+  &-5 {
+    @include layers(45%, 20%);
+    right: 15%;
+    background-color: red;
+  }
+
+  &-6 {
+    @include layers(40%, 55%);
+    right: 0;
+    background-color: yellow;
+  }
+
+  &-7 {
+    @include layers(35%, 20%);
+    left: 20%;
+    background-color: orange;
+  }
+
+  &-8 {
+    @include layers(30%, 60%);
+    background-color: violet;
+  }
+
+  &-9 {
+    @include layers(10%, 85%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  &-10 {
+    @include layers(20%, 20%);
+    right: 0;
+    top: 10%;
+    background-color: white;
+  }
+}
+
+.ghost {
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: white;
+  border-radius: 40% 40% 0 0;
+  position: relative;
+
+  &__face {
+    block-size: 20%;
+    inline-size: 80%;
+    position: absolute;
+    border: 1px solid blue;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    &--eyes {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid orange;
+
+      & span {
+        block-size: 5vh;
+        inline-size: 10vw;
+        border-radius: 50%;
+        background-color: black;
+      }
+
+    }
+
+    &--mouth {
+      block-size: 50%;
+      inline-size: 50%;
+      background-color: black;
+      margin: auto;
+      border-radius: 0 0 60% 60%;
+      margin-top: 5%;
+    }
+  }
+}
