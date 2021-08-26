@@ -1,0 +1,44 @@
+.ghost {
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: white;
+  border-radius: 40% 40% 0 0;
+  position: relative;
+
+  &__face {
+    block-size: 20%;
+    inline-size: 80%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    &--eyes {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      & span {
+        block-size: 5vh;
+        inline-size: 3vw;
+        border-radius: 50%;
+        background-color: black;
+        animation-name: blink;
+        animation-duration: 2s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+      }
+
+    }
+
+    &--mouth {
+      block-size: 50%;
+      inline-size: 50%;
+      background-color: black;
+      margin: auto;
+      border-radius: 0 0 60% 60%;
+      margin-top: 5%;
+    }
+  }
+}

@@ -1,11 +1,2 @@
-body {
-  counter-reset: game;
-}
-
-input:checked {
-  counter-increment: game;
-}
-
-.final-count::after {
-  content: counter(game);
-}
+@forward "const/";
+@forward "layout/";

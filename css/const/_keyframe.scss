@@ -1,0 +1,53 @@
+  @keyframes blink {
+    0% {
+      block-size: 5vh;
+    }
+
+    15% {
+      transform: translate(0, -1vh);
+      block-size: 2vh;
+      inline-size: 4vw;
+    }
+
+    30% {
+      transform: translate(0, 0);
+      block-size: 5vh;
+      inline-size: 3vw;
+    }
+  }
+
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-11vh);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      transform: rotate(0);
+    }
+
+    25% {
+      transform: rotate(-70deg);
+    }
+
+    50% {
+      transform: rotate(-90deg);
+    }
+
+    75% {
+      transform: rotate(-70deg);
+    }
+
+    100% {
+      transform: rotate(0);
+    }
+  }

@@ -1,0 +1,10 @@
+@use "../const/"as*;
+
+body {
+  background-color: $color-body;
+  block-size: 95vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  counter-reset: score;
+}

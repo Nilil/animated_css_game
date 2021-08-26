@@ -1,0 +1,95 @@
+  @use "../const/"as*;
+
+  .container {
+    position: relative;
+    block-size: 80%;
+    inline-size: 370px;
+    background-color: $color-layer;
+    border: 10px solid $color-border;
+    border-radius: 5%;
+
+    &__layer {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &-1 {
+      @include layers(69%, 20%);
+      @include jumping(1.2s);
+      left: 10%;
+    }
+
+    &-2 {
+      @include layers(70%, 45%);
+      @include topograp();
+      @include border(20%, 20%, 0, 5%);
+    }
+
+    &-3 {
+      @include layers(59%, 20%);
+      @include jumping(1s);
+      left: 40%;
+    }
+
+    &-4 {
+      @include layers(60%, 50%);
+      @include topograp();
+      @include border();
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    &-5 {
+      @include layers(39%, 20%);
+      @include jumping(.6s);
+      right: 15%;
+    }
+
+    &-6 {
+      @include layers(40%, 55%);
+      @include border(20%, 20%, 5%, 0);
+      @include topograp();
+      right: 0;
+    }
+
+    &-7 {
+      @include layers(30%, 20%);
+      @include jumping(2s);
+      left: 20%;
+    }
+
+    &-8 {
+      @include layers(31%, 60%);
+      @include topograp();
+      @include border(20%, 20%, 0, 5%);
+    }
+
+    &-10 {
+      @include layers(15%, 15%);
+      right: 9%;
+      top: 12%;
+
+      animation-name: dash;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite;
+
+      .ghost__face {
+        block-size: 15%;
+        inline-size: 50%;
+
+        & span {
+          animation-name: none;
+        }
+      }
+    }
+
+    &-11 {
+      @include layers(20%, 21%);
+      @include topograp();
+      @include colum();
+      right: 0;
+      top: 10%;
+    }
+  }

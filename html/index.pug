@@ -1,22 +1,5 @@
-mixin enemies
-    li
-      input(type="checkbox")
-      .shield
-
+include mixin.pug
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="/css/dist/main.css")
-    title Juego de click en CSS
-  body 
-    ul
-      +enemies
-      +enemies
-      +enemies
-      +enemies
-      +enemies
-      +enemies
-    h3.final-count Score: 
+  include head.pug
+  include body.pug

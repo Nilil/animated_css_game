@@ -1,0 +1,28 @@
+@use "../const/"as*;
+
+input {
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  block-size: 60%;
+  inline-size: 100%;
+  margin: 0;
+  top: 0;
+  z-index: 2;
+  // border: 1px solid red;
+
+  &:checked {
+    counter-increment: score;
+  }
+}
+
+.final-count {
+  margin: 0;
+  text-align: center;
+  color: $color-body;
+  padding-top: 10%;
+
+  &::after {
+    content: counter(score);
+  }
+}
